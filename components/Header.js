@@ -4,8 +4,13 @@ import { BadgeCheckIcon, CollectionIcon, HomeIcon, LightningBoltIcon, SearchIcon
 
 function Header(){
     return (
-        <header className="flex flex-col m-5 sm:flex-row justify-between items-center h-auto">
-            <div className="flex flex-grow justify-evenly max-w-2xl ">
+        // <header className="w-full max-w-[1240px] lg:flex flex-col mt-5 mb-5 sm:flex-row py-8 justify-between h-auto mx-auto">
+        <header className="items-center justify-between lg:w-full mx-auto max-w-[1240px] xl:flex text-center pt-8 xl:pb-8">
+            <div className="">
+                <h1 className="font-bold text-xl lg:text-3xl text-center">MOVIE WORLD</h1>
+            </div>
+            {/* <div className="hidden sm:flex flex-grow justify-evenly py-8"> */}
+            <div className="flex justify-evenly py-8 whitespace-nowrap overflow-x-scroll scrollbar-hide">
                 <HeaderItem title="HOME" Icon={HomeIcon} />
                 <HeaderItem title="TRENDING" Icon={LightningBoltIcon} />
                 <HeaderItem title="VERIFIED" Icon={BadgeCheckIcon} />
@@ -13,7 +18,6 @@ function Header(){
                 <HeaderItem title="SEARCH" Icon={SearchIcon} />
                 <HeaderItem title="ACCOUNT" Icon={UserIcon} />
             </div>
-            <h1 className="">MOVIE WORLD</h1>
         </header>
     );
 }
